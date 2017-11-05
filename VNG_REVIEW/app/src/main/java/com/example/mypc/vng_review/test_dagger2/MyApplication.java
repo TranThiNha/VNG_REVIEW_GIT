@@ -17,6 +17,8 @@ public class MyApplication extends Application {
     AppComponent appComponent;
     AnimalComponent animalComponent;
 
+
+
     @Override
     public void onCreate() {
         super.onCreate();

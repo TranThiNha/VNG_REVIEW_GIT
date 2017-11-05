@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:name=".test_dagger2.MyApplication"
+        android:name=".dagger2.MyApplication2"
         >
 
         <meta-data android:name="DATABASE" android:value="my_database.db" />

@@ -12,12 +12,15 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.mypc.vng_review.SugarDao.Book;
+import com.example.mypc.vng_review.dagger2.MyApplication2;
+import com.example.mypc.vng_review.dagger2.models.Car;
 import com.example.mypc.vng_review.greenDao.DaoSession;
 import com.example.mypc.vng_review.retrofit.api.MovieApi;
 import com.example.mypc.vng_review.retrofit.model.NowPlaying;
 import com.example.mypc.vng_review.retrofit.utils.Constant;
 import com.example.mypc.vng_review.retrofit.utils.RetrofitUtils;
 import com.example.mypc.vng_review.test_dagger2.MyApplication;
+import com.example.mypc.vng_review.test_dagger2.models.Animal;
 import com.example.mypc.vng_review.test_dagger2.models.Cat;
 import com.example.mypc.vng_review.test_dagger2.models.Dog;
 
@@ -44,10 +47,12 @@ public class MainActivity extends AppCompatActivity implements ViewLisstener {
     OkHttpClient client = new OkHttpClient();
     private MovieApi mMovieApi;
 
-    @Inject Cat cat;
-    @Inject
-    Dog dog;
+//    @Inject Cat cat;
+//    @Inject
+//    Dog dog;
 
+    @Inject
+    Car car;
     DaoSession daoSession;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,10 +62,11 @@ public class MainActivity extends AppCompatActivity implements ViewLisstener {
         img = (ImageView) findViewById(R.id.img);
         btn = (Button) findViewById(R.id.btn);
 
-        ((MyApplication)getApplication()).getAppComponent().inject(this);
-        cat.keu();
-        dog.keu();
+        ((MyApplication2)getApplication()).getAppComponent().inject(this);
+//        cat.keu();
+//        dog.keu();
 
+        car.rap();
 //dagger 2
 
 
